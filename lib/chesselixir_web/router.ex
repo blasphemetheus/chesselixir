@@ -18,14 +18,16 @@ defmodule ChesselixirWeb.Router do
 
   scope "/", ChesselixirWeb do
     pipe_through :browser
-    
+
+    live "/", LobbyLive, :index
     live "/play/:id", GameLive, :show
-    get "/", PageController, :home
   end
 
   # Other scopes may use custom stacks.
   # scope "/api", ChesselixirWeb do
   #   pipe_through :api
+  #   post "/games", Api.GameController, :create
+  #   post "/games/:id/move", Api.GameController, :move
   # end
 
   # Enable LiveDashboard in development

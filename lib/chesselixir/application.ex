@@ -12,6 +12,7 @@ defmodule Chesselixir.Application do
       Chesselixir.Repo,
       {DNSCluster, query: Application.get_env(:chesselixir, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Chesselixir.PubSub},
+      ChesselixirWeb.Presence,
       # Start a worker by calling: Chesselixir.Worker.start_link(arg)
       # {Chesselixir.Worker, arg},
       # Start to serve requests, typically the last entry
