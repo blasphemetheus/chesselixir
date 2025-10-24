@@ -1,0 +1,23 @@
+game-wrap {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 16px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(48px, 1fr));
+  grid-auto-rows: minmax(48px, 1fr);
+  border: 2px solid #333;
+}
+
+.sq {
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; border: none; cursor: pointer;
+}
+
+.sq.light { background: #f0d9b5; }
+.sq.dark  { background: #b58863; }
+.sq.selected { outline: 3px solid #2b90d9; }
+
+.hud .error { color: #b00020; font-weight: 600; }

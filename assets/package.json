@@ -1,0 +1,13 @@
+{
+  "repository": {},
+  "license": "MIT",
+  "scripts": {
+    "deploy": "esbuild default --minify --sourcemap --outdir=../priv/static/assets && tailwindcss -i css/app.css -o ../priv/static/assets/app.css --minify"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "esbuild": "^0.25.11",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2"
+  }
+}
